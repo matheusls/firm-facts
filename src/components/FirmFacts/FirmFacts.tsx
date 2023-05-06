@@ -1,3 +1,4 @@
+import { ReactComponent as CloseIcon } from 'assets/close.svg';
 import { ReactComponent as SearchIcon } from 'assets/search.svg';
 import { Button, Card } from 'components';
 
@@ -6,6 +7,12 @@ import styles from './styles.module.scss';
 export const FirmFacts = () => {
   return (
     <div className={styles.container}>
+      <div className={styles['close-container']}>
+        <button className={styles.close}>
+          <CloseIcon />
+        </button>
+      </div>
+
       <h1 className={styles.title}>Firm Facts</h1>
 
       <div className={styles.grid}>
