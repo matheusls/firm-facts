@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
 import 'styles/global.scss';
+import { FirmFacts } from 'components';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -10,7 +11,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <h1>Firm Facts</h1>
+    <FirmFacts />
   </React.StrictMode>
 );
 
