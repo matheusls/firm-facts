@@ -1,0 +1,40 @@
+@import 'styles/mixins';
+
+.card {
+  align-items: center;
+  background-color: var(--white);
+  border: clamp(5px, 1vw, 15px) solid var(--white);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: clamp(8px, 1vw, 35px) clamp(4px, 1vw, 15px);
+  transition: all 0.5s ease-in-out;
+
+  &:first-child {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  &:nth-child(n + 5) {
+    justify-content: flex-start;
+  }
+
+  &:hover {
+    button:not(:disabled) {
+      @include button-hover-styles;
+    }
+  }
+}
+
+.default {
+  &:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+  }
+}
+
+.border {
+  &:hover {
+    border-color: var(--secondary-color);
+  }
+}
